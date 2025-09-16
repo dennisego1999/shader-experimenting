@@ -1,26 +1,26 @@
 @layer components {
     .heading {
-        h1 {
+        &[data-size='1'] {
             @apply text-2xl md:text-5xl font-extrabold;
         }
 
-        h2 {
+        &[data-size='2'] {
             @apply text-xl md:text-4xl font-bold;
         }
 
-        h3 {
+        &[data-size='3'] {
             @apply text-lg md:text-3xl font-semibold;
         }
 
-        h4 {
+        &[data-size='4'] {
             @apply text-base md:text-2xl font-semibold;
         }
 
-        h5 {
+        &[data-size='5'] {
             @apply text-sm md:text-xl font-medium;
         }
 
-        h6 {
+        &[data-size='6'] {
             @apply text-xs md:text-lg font-medium;
         }
     }

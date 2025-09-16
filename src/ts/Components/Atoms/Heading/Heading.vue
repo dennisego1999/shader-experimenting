@@ -1,14 +1,15 @@
 <script setup lang="ts">
-import IHeadingTag from '../../../Interfaces/IHeadingTag.ts';
+import IHeading from '../../../Interfaces/IHeading.ts';
 
 // Define props
-withDefaults(defineProps<IHeadingTag>(), {
-	tag: 'h1'
+withDefaults(defineProps<IHeading>(), {
+	tag: 'h1',
+	size: 1
 });
 </script>
 
 <template>
-	<component :is="tag" class="heading">
+	<component :is="tag" class="heading" :data-size="size">
 		<slot />
 	</component>
 </template>

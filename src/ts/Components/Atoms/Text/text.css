@@ -1,5 +1,19 @@
 @layer components {
     .text {
-        @apply text-xl md:text-2xl;
+        &[data-size='1'] {
+            @apply text-xl md:text-4xl;
+        }
+
+        &[data-size='2'] {
+            @apply text-lg md:text-3xl;
+        }
+
+        &[data-size='3'] {
+            @apply text-base md:text-2xl;
+        }
+
+        &[data-size='4'] {
+            @apply text-sm md:text-xl;
+        }
     }
 }
