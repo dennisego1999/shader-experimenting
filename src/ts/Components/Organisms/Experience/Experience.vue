@@ -2,7 +2,6 @@
 import Section from '../../Organisms/Section/Section.vue';
 import ExperienceManager from '../../../Classes/ExperienceManager.ts';
 import { onBeforeUnmount, onMounted, ref, Ref } from 'vue';
-import Text from '../../Atoms/Text/Text.vue';
 
 // Set variables
 const experiencerCanvas: Ref<HTMLCanvasElement | null> = ref(null);
@@ -25,7 +24,6 @@ onBeforeUnmount(() => {
 
 <template>
 	<Section class="experience" :fluid="true">
-		<Text>Hello world!</Text>
 		<canvas ref="experiencerCanvas" class="h-full w-full" />
 	</Section>
 </template>
