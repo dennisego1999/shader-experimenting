@@ -1,0 +1,5 @@
+@layer components {
+    .input-error {
+        @apply text-red-500;
+    }
+}

@@ -1,0 +1,20 @@
+/* Tailwind */
+@import "tailwindcss";
+
+/* Global */
+@import "./global/transitions.css";
+
+/* Atomic */
+@import "../ts/Components/Atoms/Heading/heading.css";
+@import "../ts/Components/Atoms/Input/input.css";
+@import "../ts/Components/Atoms/InputError/input-error.css";
+@import "../ts/Components/Atoms/Label/label.css";
+@import "../ts/Components/Atoms/Text/text.css";
+
+@import "../ts/Components/Organisms/Section/section.css";
+@import "../ts/Components/Organisms/Experience/experience.css";
+
+/* Theme */
+@theme {
+    --font-display: 'Arial', 'sans-serif';
+}

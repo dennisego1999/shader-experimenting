@@ -1,0 +1,5 @@
+@layer components {
+    input {
+        @apply border-blue-500 focus:border-red-500 rounded-md border-2 bg-white px-2 py-4 outline-0;
+    }
+}

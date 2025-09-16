@@ -1,0 +1,5 @@
+@layer components {
+    .text {
+        @apply text-xl md:text-2xl;
+    }
+}

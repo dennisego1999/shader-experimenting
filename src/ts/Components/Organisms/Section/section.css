@@ -1,0 +1,19 @@
+@layer components {
+    .section {
+        @apply relative h-full w-full;
+
+        container-type: inline-size;
+    }
+
+    .section:not(.section--fluid) {
+        @apply px-4 sm:px-6 lg:px-8;
+    }
+
+    .section__inner {
+        @apply h-full flex flex-wrap;
+    }
+
+    .section:not(.section--fluid) .section__inner {
+        @apply container mx-auto;
+    }
+}
