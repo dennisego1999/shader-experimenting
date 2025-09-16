@@ -1,10 +1,10 @@
-import { AmbientLight, Clock, DirectionalLight, Scene } from 'three';
+import { AmbientLight, Clock, DirectionalLight, Mesh, PlaneGeometry, Scene, ShaderMaterial } from 'three';
 import ExperienceRenderer from './ExperienceRenderer.ts';
 import ExperienceCamera from './ExperienceCamera.ts';
 import { EventService } from '../Services/EventService.ts';
 import { CustomEventKey } from '../Enums/CustomEventKey.ts';
-import ModelManager from './ModelManager.ts';
-import { ModelPrefix } from '../Enums/ModelPrefix.ts';
+import boxFragmentShader from '../../shaders/Box/Fragment.glsl';
+import boxVertextShader from '../../shaders/Box/Vertex.glsl';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 export default class ExperienceManager {
@@ -109,7 +109,19 @@ export default class ExperienceManager {
 		this._renderer.setSize(boundingClientRect.width, boundingClientRect.height);
 	}
 
-	private async populateScene(): Promise<void> {}
+	private async populateScene(): Promise<void> {
+		const shaderMaterial = new ShaderMaterial({
+			// vertexShader: boxVertextShader,
+			fragmentShader: boxFragmentShader,
+			uniforms: {},
+			wireframe: false
+		});
+
+		const plane = new PlaneGeometry(1, 1, 5, 5);
+		const mesh = new Mesh(plane, shaderMaterial);
+
+		this._scene.add(mesh);
+	}
 
 	private animate(): void {
 		const delta = this._clock.getDelta();
